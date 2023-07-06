@@ -1,7 +1,10 @@
+import { NavLink } from '@/components/NavLink'
 import './globals.css'
-import { Inter } from 'next/font/google'
+import { Quicksand } from 'next/font/google'
+import Link from 'next/link'
 
-const inter = Inter({ subsets: ['latin'] })
+
+const quicksand = Quicksand({ subsets: ['latin']},)
 
 export const metadata = {
   title: 'Create Next App',
@@ -15,7 +18,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={quicksand.className}>
+        <ul className="inline-flex list-none flex-row relative h-[10vh] p-3 justify-start bg-green-600 min-w-full">
+          <Link href="/" className="font-bold text-center flex flex-col justify-center p-3 bg-blue-600 hover:bg-blue-500 rounded mr-2">IntelligentTodo</Link>
+          <NavLink href="/home" title="Home"></NavLink>
+        </ul>
+        <div className="h-[90vh] flex flex-col">
+          {children}
+        </div>
+      </body>
     </html>
   )
 }
