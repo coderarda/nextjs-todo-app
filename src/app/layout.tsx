@@ -19,11 +19,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={quicksand.className}>
-        <ul className="inline-flex list-none flex-row relative h-[10vh] p-3 justify-start bg-green-600 min-w-full">
+        <ul className="inline-flex list-none flex-row relative h-[10vh] p-3 justify-start bg-blue-900 drop-shadow-lg min-w-full">
           <Link href="/" className="font-bold text-center flex flex-col justify-center p-3 bg-blue-600 hover:bg-blue-500 rounded mr-2">IntelligentTodo</Link>
           <NavLink href="/home" title="Home"></NavLink>
         </ul>
-        <div className="h-[90vh] flex flex-col">
+        <div className="h-[90vh] flex flex-row">
           {children}
         </div>
       </body>

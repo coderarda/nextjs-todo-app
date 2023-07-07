@@ -14,7 +14,7 @@ export function TodoInterface() {
   }
 
   return (
-    <div className="bg-slate-600 w-[40vw] flex m-3 flex-col justify-end rounded-2xl">
+    <div className="bg-slate-600 w-[40vw] flex m-3 flex-1 flex-col justify-end rounded-2xl">
       <ul className="inline-flex flex-col">
         {items.map((el) => {
           return el

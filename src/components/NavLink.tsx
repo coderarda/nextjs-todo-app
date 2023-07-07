@@ -8,7 +8,7 @@ interface NavLinkProps {
 
 export function NavLink(props: NavLinkProps) {
     return(
-        <li className="hover:drop-shadow-lg p-3 flex flex-col rounded-md transition justify-center text-center bg-green-500 hover:bg-green-400">
+        <li className="hover:drop-shadow-lg p-3 flex flex-col rounded-md transition justify-center text-center bg-slate-600 hover:bg-slate-500">
             <Link href={props.href}>
                 <span className="text-center">{props.title}</span>
             </Link>
