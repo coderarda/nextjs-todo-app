@@ -1,5 +1,7 @@
+"use client"
+
 import Link from "next/link";
-import { useRouter } from "next/router";
+import { usePathname, useRouter } from "next/navigation";
 
 interface NavLinkProps {
     href: string;
@@ -8,9 +10,12 @@ interface NavLinkProps {
 
 export function NavLink(props: NavLinkProps) {
     return(
-        <li className="hover:drop-shadow-lg p-3 flex flex-col rounded-md transition justify-center text-center bg-slate-600 hover:bg-slate-500">
-            <Link href={props.href}>
-                <span className="text-center">{props.title}</span>
+        <li className={`w-20 m-2 py-1 px-3 hover:bg-lime-500 flex flex-col rounded transition ease-linear items-end duration-150 justify-center text-end ${usePathname() == props.href ? "bg-lime-500" : ""}`}>
+            <Link href={props.href} className="inline-flex items-center flex-row">
+                <span className="material-symbols-outlined">
+                    home
+                </span>
+                <span className="text-sm">Home</span>
             </Link>
         </li>
     );

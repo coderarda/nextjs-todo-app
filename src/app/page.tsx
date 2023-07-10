@@ -5,9 +5,11 @@ import { ReactElement, useRef, useState } from "react";
 
 export default function Home() {
   return (
-    <main className="bg-gray-800 flex flex-col items-center flex-1">
-      <span className="text-gray-300 p-2 font-semibold">This is YOUR to-do list.</span>
-      <TodoInterface /> 
+    <main className="bg-zinc-900 flex flex-row p-3 h-full justify-start">
+      <div className="w-full flex flex-col p-3 items-center justify-center">
+        <span className="text-gray-300 font-semibold">This is YOUR to-do list.</span>
+        <TodoInterface /> 
+      </div>
     </main>
   );
 }
