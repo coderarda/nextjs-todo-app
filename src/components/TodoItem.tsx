@@ -1,9 +1,8 @@
-import { randomInt } from "crypto";
 import React from "react";
 
 export function TodoItem({ title }: { title: string }) {
     return (
-        <li className="inline-flex flex-row p-2 mx-3 my-1 justify-start rounded items-center bg-zinc-600 hover:bg-lime-700 ease-linear duration-200">
+        <li className="inline-flex flex-row p-2 mx-3 my-1 justify-start rounded items-center bg-lime-600 hover:bg-lime-500 ease-linear duration-200">
             <div className="rounded-sm h-5 aspect-square flex flex-row justify-center bg-zinc-300">
                 <input type="checkbox" className="peer aspect-square opacity-0 w-5 absolute cursor-pointer" />
                 <div className="invisible w-fit rounded-sm peer-checked:visible cursor-pointer flex flex-col justify-center peer-checked:bg-lime-500 flex-1">

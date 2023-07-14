@@ -18,8 +18,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${quicksand.className} flex flex-row`}>
-        <div className='w-full flex flex-col m-0'>
+        <div className="flex-1">
           <SideNav />
+        </div>
+        <div className='w-[84vw] flex flex-col m-0'>
           {children}
         </div>
       </body>
