@@ -21,8 +21,9 @@ export function TodoInterface() {
         })}
       </ul>
       <div className="rounded-full m-2 flex flex-row p-1 bg-zinc-600">
-        <input type="text" ref={textRef} className="ml-2 text-white focus:outline-none bg-zinc-600 w-full" />
+        <input title="Add todo..." type="text" ref={textRef} className="ml-2 text-white focus:outline-none bg-zinc-600 w-full" />
         <button
+          type="button"
           className="rounded-full aspect-square h-6 flex flex-row justify-center bg-lime-500"
           onClick={(e) => {
             e.preventDefault();
