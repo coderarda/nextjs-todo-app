@@ -1,18 +1,14 @@
 import React from "react";
 
-export function TodoItem({ title }: { title: string }) {
+export function TodoItem({ title, onRemove }: { title: string; onRemove?: () => void }) {
     return (
         <li className="inline-flex flex-row p-2 mx-3 my-1 justify-start rounded items-center bg-lime-600 hover:bg-lime-500 ease-linear duration-200">
-            <div className="rounded-sm h-5 aspect-square flex flex-row justify-center bg-zinc-300">
-                <input type="checkbox" className="peer aspect-square opacity-0 w-5 absolute cursor-pointer" />
-                <div className="invisible w-fit rounded-sm peer-checked:visible cursor-pointer flex flex-col justify-center peer-checked:bg-green-600 flex-1">
-                    <div className="ml-0.5 flex h-fit flex-col justify-center">
-                        <div className="w-3.5 h-[2px] rounded-full bg-white -rotate-[45deg] mb-[1px] ml-[4px] absolute"></div>
-                        <div className="w-2 h-[2px] mt-[2px] rounded-full bg-white rotate-[45deg] absolute"></div>
-                    </div>
-                </div>
-            </div>
-            <span className="ml-2 text-sm">{title}</span>
+            <label className="relative h-6 w-6 rounded-md border-2 border-white/40 bg-white/10 hover:bg-white/20 transition-colors flex items-center justify-center cursor-pointer">
+                <input type="checkbox" className="peer absolute opacity-0 h-6 w-6 cursor-pointer" />
+                <svg className="w-4 h-4 text-white opacity-0 peer-checked:opacity-100 transition-opacity" fill="none" stroke="currentColor" strokeWidth="3" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
+            </label>
+            <span className="ml-2 text-sm flex-1">{title}</span>
+            <button onClick={onRemove} className="ml-2 text-xs bg-red-500 hover:bg-red-600 text-white px-2 py-0.5 rounded">Remove</button>
         </li>
     );
 }
