@@ -2,7 +2,7 @@ import { NavLink } from "./NavLink";
 
 export function SideNav() {
     return (
-        <ul className="inline-flex h-full w-[16vw] flex-col absolute p-3 bg-zinc-800 border-r-[1px] border-r-zinc-600">
+        <ul className="flex h-screen w-full flex-col p-3 bg-zinc-800 border-r border-r-zinc-600 overflow-y-auto">
             <div className="inline-flex flex-row p-2">
                 <div className="bg-zinc-600 aspect-square w-10">Logo</div>
                 <h3 className="font-semibold ml-2">Intelligent To-do</h3>

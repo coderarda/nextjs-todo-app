@@ -2,6 +2,7 @@ import { NavLink } from '@/components/NavLink'
 import './globals.css'
 import { Quicksand } from 'next/font/google'
 import { SideNav } from '@/components/SideNav'
+import { TodosProvider } from '@/components/TodosContext'
 
 const quicksand = Quicksand({ subsets: ['latin']},)
 
@@ -17,12 +18,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${quicksand.className} flex flex-row`}>
-        <div className="flex-1">
+      <body className={`${quicksand.className} flex flex-row h-screen overflow-hidden`}>
+        <div className="w-[16vw] shrink-0 h-screen sticky top-0">
           <SideNav />
         </div>
-        <div className='w-[84vw] flex flex-col m-0'>
-          {children}
+        <div className='w-[84vw] h-screen overflow-y-auto flex flex-col m-0 bg-zinc-900'>
+          <TodosProvider>{children}</TodosProvider>
         </div>
       </body>
     </html>
